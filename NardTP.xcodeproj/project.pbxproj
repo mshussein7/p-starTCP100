@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C7762EE62B3F97550086D02E /* StarIO10 in Frameworks */ = {isa = PBXBuildFile; productRef = C7762EE52B3F97550086D02E /* StarIO10 */; };
+		C7762EED2B3F9D910086D02E /* longInvoicetml.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7762EEB2B3F9D910086D02E /* longInvoicetml.txt */; };
+		C7762EEE2B3F9D910086D02E /* shortInvoicetml.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7762EEC2B3F9D910086D02E /* shortInvoicetml.txt */; };
+		C7762EF02B3F9EB90086D02E /* shortInvoicetml_ar.txt in Resources */ = {isa = PBXBuildFile; fileRef = C7762EEF2B3F9EB90086D02E /* shortInvoicetml_ar.txt */; };
 		C7D63D892B3F90F100448D31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D63D882B3F90F100448D31 /* AppDelegate.swift */; };
 		C7D63D8B2B3F90F100448D31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D63D8A2B3F90F100448D31 /* SceneDelegate.swift */; };
 		C7D63D8D2B3F90F100448D31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D63D8C2B3F90F100448D31 /* ViewController.swift */; };
@@ -16,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C7762EEB2B3F9D910086D02E /* longInvoicetml.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = longInvoicetml.txt; sourceTree = "<group>"; };
+		C7762EEC2B3F9D910086D02E /* shortInvoicetml.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shortInvoicetml.txt; sourceTree = "<group>"; };
+		C7762EEF2B3F9EB90086D02E /* shortInvoicetml_ar.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = shortInvoicetml_ar.txt; sourceTree = "<group>"; };
 		C7D63D852B3F90F100448D31 /* NardTP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NardTP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7D63D882B3F90F100448D31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7D63D8A2B3F90F100448D31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7762EE62B3F97550086D02E /* StarIO10 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +71,9 @@
 				C7D63D912B3F90F200448D31 /* Assets.xcassets */,
 				C7D63D932B3F90F200448D31 /* LaunchScreen.storyboard */,
 				C7D63D962B3F90F200448D31 /* Info.plist */,
+				C7762EEB2B3F9D910086D02E /* longInvoicetml.txt */,
+				C7762EEC2B3F9D910086D02E /* shortInvoicetml.txt */,
+				C7762EEF2B3F9EB90086D02E /* shortInvoicetml_ar.txt */,
 			);
 			path = NardTP;
 			sourceTree = "<group>";
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = NardTP;
+			packageProductDependencies = (
+				C7762EE52B3F97550086D02E /* StarIO10 */,
+			);
 			productName = NardTP;
 			productReference = C7D63D852B3F90F100448D31 /* NardTP.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = C7D63D7C2B3F90F100448D31;
+			packageReferences = (
+				C7762EE42B3F97550086D02E /* XCRemoteSwiftPackageReference "StarXpand-SDK-iOS" */,
+			);
 			productRefGroup = C7D63D862B3F90F100448D31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +144,10 @@
 			files = (
 				C7D63D952B3F90F200448D31 /* LaunchScreen.storyboard in Resources */,
 				C7D63D922B3F90F200448D31 /* Assets.xcassets in Resources */,
+				C7762EF02B3F9EB90086D02E /* shortInvoicetml_ar.txt in Resources */,
+				C7762EEE2B3F9D910086D02E /* shortInvoicetml.txt in Resources */,
 				C7D63D902B3F90F100448D31 /* Main.storyboard in Resources */,
+				C7762EED2B3F9D910086D02E /* longInvoicetml.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +320,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +349,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +385,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C7762EE42B3F97550086D02E /* XCRemoteSwiftPackageReference "StarXpand-SDK-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/star-micronics/StarXpand-SDK-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C7762EE52B3F97550086D02E /* StarIO10 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C7762EE42B3F97550086D02E /* XCRemoteSwiftPackageReference "StarXpand-SDK-iOS" */;
+			productName = StarIO10;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C7D63D7D2B3F90F100448D31 /* Project object */;
 }
