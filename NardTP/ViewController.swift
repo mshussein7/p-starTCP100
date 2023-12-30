@@ -15,6 +15,8 @@ class ViewController: UIViewController, WKNavigationDelegate, UIDocumentPickerDe
     
     @IBOutlet weak var txtURL: UITextField!
     
+    @IBOutlet weak var txtHTML: UITextField!
+    
     var webView: WKWebView!
     
     let identifier = "2550722011301040"
@@ -32,6 +34,7 @@ class ViewController: UIViewController, WKNavigationDelegate, UIDocumentPickerDe
         webView = WKWebView(frame: .init(x: 0, y: 0, width: 450, height: 600))
         webView.navigationDelegate = self
         txtURL.delegate = self
+        txtHTML.delegate = self
         let starConnectionSettings = StarConnectionSettings(interfaceType: selectedInterface, identifier: identifier)
         printer = StarPrinter(starConnectionSettings)
     }
@@ -206,7 +209,17 @@ class ViewController: UIViewController, WKNavigationDelegate, UIDocumentPickerDe
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.txtURL.resignFirstResponder()
+        textField.resignFirstResponder()
+        if textField == txtURL {
+            handleURLTextField()
+        } else if textField == txtHTML {
+            handleHTMLTextField()
+        }
+
+        return true
+    }
+    
+    func handleURLTextField() {
         if let text = self.txtURL.text, !text.isEmpty {
             if let htmlURL = URL(string: text) {
                 let request = URLRequest(url: htmlURL)
@@ -215,9 +228,18 @@ class ViewController: UIViewController, WKNavigationDelegate, UIDocumentPickerDe
                 self.showAlert(message: "Invalid URL")
             }
         } else {
+            self.txtURL.resignFirstResponder()
             self.showAlert(message: "URL is empty")
         }
-        return true
+    }
+    
+    func handleHTMLTextField() {
+        if let text = self.txtHTML.text, !text.isEmpty {
+            webView.loadHTMLString(text, baseURL: nil)
+        } else {
+            self.txtHTML.resignFirstResponder()
+            self.showAlert(message: "HTML is empty")
+        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
